@@ -1,3 +1,19 @@
 img {
   height: 100px
 }
+
+.curious-image {
+    margin-right: 0;
+    margin-left: 1000px;
+}
+
+.grumpy-image {
+    margin-top: 350px;
+    margin-left: 500px;
+}
+
+.small-image {
+    margin-right: 1000px;
+    margin-left: 0;
+    margin-top: 0;
+}

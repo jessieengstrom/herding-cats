@@ -4,7 +4,9 @@ import small from '../small.png'
 class Small extends React.Component {
     render() {
         return (
-            <img src={small} />
+            <div className='small-image'>
+                <img src={small} />
+            </div>
         )
     }
 }

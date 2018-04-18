@@ -4,7 +4,9 @@ import curious from '../curious.jpg';
 class Curious extends React.Component {
     render() {
         return (
-            <img src={curious} />
+            <div className='curious-image'>
+                <img src={curious} />
+            </div>
         )
     }
 }
