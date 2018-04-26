@@ -9,6 +9,6 @@ This is a single page app built using react
 [Linkedin](http://www.linkedin.com/in/jessieengstrom)
 
 ## Technologies
-React.js
-Javascript
+* React.js
+* Javascript
 
