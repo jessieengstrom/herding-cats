@@ -13,7 +13,7 @@ class App extends Component {
 
     handleNameChange = (e, name) => {
         e.preventDefault();
-        this.setState({name: e.target.value});
+        this.setState({ name: e.target.value });
     }
 
     render() {
