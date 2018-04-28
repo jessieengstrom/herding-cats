@@ -7,7 +7,7 @@ import '../css/App.css';
 class App extends Component {
     state = {
         sname: null,
-        cname: null,
+        cname: 'Curious',
         gname: null,
     }
 
