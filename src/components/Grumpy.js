@@ -6,6 +6,7 @@ class Grumpy extends React.Component {
     render() {
         return (
             <div className='grumpy-image'>
+                <h1>{this.props.name}</h1>
                 <img src={grumpy} />
                 <KittyForm />
             </div>

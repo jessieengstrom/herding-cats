@@ -6,9 +6,9 @@ import '../css/App.css';
 
 class App extends Component {
     state = {
-        sname: null,
+        sname: 'Small',
         cname: 'Curious',
-        gname: null,
+        gname: 'Grumpy',
     }
 
     handleNameChange = (e, name) => {
@@ -20,8 +20,8 @@ class App extends Component {
         return (
             <div>
                 <Curious name={this.state.cname} nameChange={this.handleNameChange} />
-                <Small />
-                <Grumpy />
+                <Small name={this.state.sname}/>
+                <Grumpy name={this.state.gname}/>
             </div>
         );
     }

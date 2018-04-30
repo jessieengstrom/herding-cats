@@ -6,6 +6,7 @@ class Small extends React.Component {
     render() {
         return (
             <div className='small-image'>
+                <h1>{this.props.name}</h1>
                 <img src={small} />
                 <KittyForm />
             </div>
