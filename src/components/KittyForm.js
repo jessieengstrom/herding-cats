@@ -1,17 +1,21 @@
 import React from 'react';
 
 class KittyForm extends React.Component {
-    // nameRef = React.createRef();
-    nameChange() {
-        this.props.handleNameChange(this.props.kittyname);
+    handleSubmit(e) {
+        e.preventDefault();
+        let name = this.refs.kname.value;
+        if(name) {
+            this.refs.kname.value = '';
+            this.props.nameChange(name);
+        }
     }
 
     render() {
         return (
             <div>
-                <form className='kitty-form'>
-                    <input type='text' name='name' placeholder='kitty name' />
-                    <input type='submit' value='name kitty' onSubmit={this.nameChange} />
+                <form className='kitty-form' onSubmit={this.handleSubmit.bind(this)}>
+                    <input type='text' ref='kname' placeholder='kitty name' />
+                    <input type='submit' value='name kitty' />
                 </form>
             </div>
         )

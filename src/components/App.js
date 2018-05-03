@@ -5,23 +5,23 @@ import Grumpy from './Grumpy';
 import '../css/App.css';
 
 class App extends Component {
-    state = {
-        sname: 'Small',
-        cname: 'Curious',
-        gname: 'Grumpy',
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+        }
     }
-
-    handleNameChange = (e, name) => {
-        e.preventDefault();
-        this.setState({ name: e.target.value });
+    
+    nameChange = (name) => {
+        this.setState({ name: name });
     }
 
     render() {
         return (
             <div>
-                <Curious name={this.state.cname} nameChange={this.handleNameChange} />
-                <Small name={this.state.sname}/>
-                <Grumpy name={this.state.gname}/>
+                <Curious name={this.state.name} nameChange={this.nameChange.bind(this)} />
+                <Small name={this.state.name}/>
+                <Grumpy name={this.state.name}/>
             </div>
         );
     }

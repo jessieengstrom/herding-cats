@@ -8,7 +8,7 @@ class Curious extends React.Component {
             <div className='curious-image'>
                 <h1>{this.props.name}</h1>
                 <img src={curious} />
-                <KittyForm kittyname='cname' nameChange={this.handleNameChange} />
+                <KittyForm kittyname='name' nameChange={this.props.nameChange.bind(this)} />
             </div>
         )
     }
