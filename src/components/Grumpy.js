@@ -8,7 +8,7 @@ class Grumpy extends React.Component {
             <div className='grumpy-image'>
                 <h1>{this.props.name}</h1>
                 <img src={grumpy} />
-                <KittyForm />
+                <KittyForm nameChange={this.props.nameChange.bind(this)} />
             </div>
         )
     }

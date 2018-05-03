@@ -8,7 +8,7 @@ class Small extends React.Component {
             <div className='small-image'>
                 <h1>{this.props.name}</h1>
                 <img src={small} />
-                <KittyForm />
+                <KittyForm nameChange={this.props.nameChange.bind(this)} />
             </div>
         )
     }

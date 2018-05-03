@@ -8,20 +8,30 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
+            cname: '',
+            gname: '',
+            sname: '',
         }
     }
     
-    nameChange = (name) => {
-        this.setState({ name: name });
+    curiousNameChange = (name) => {
+        this.setState({ cname: name });
+    }
+
+    smallNameChange = (name) => {
+        this.setState({ sname: name });
+    }
+
+    grumpyNameChange = (name) => {
+        this.setState({ gname: name });
     }
 
     render() {
         return (
             <div>
-                <Curious name={this.state.name} nameChange={this.nameChange.bind(this)} />
-                <Small name={this.state.name}/>
-                <Grumpy name={this.state.name}/>
+                <Curious name={this.state.cname} nameChange={this.curiousNameChange.bind(this)} />
+                <Small name={this.state.sname} nameChange={this.smallNameChange.bind(this)} />
+                <Grumpy name={this.state.gname} nameChange={this.grumpyNameChange.bind(this)} />
             </div>
         );
     }
