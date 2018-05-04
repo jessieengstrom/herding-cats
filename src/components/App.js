@@ -13,28 +13,37 @@ class App extends Component {
             sname: '',
             cfood: 0,
             gfood: 0,
-            sfood: 0
+            sfood: 0,
+            cisHidden: false,
+            sisHidden: false,
+            gisHidden: false,
         }
     }
     
     curiousNameChange = (name) => {
-        this.setState({ cname: name });
+        this.setState({ cname: name,
+                        cisHidden: !this.state.cisHidden
+        });
     }
 
     smallNameChange = (name) => {
-        this.setState({ sname: name });
+        this.setState({ sname: name,
+                        sisHidden: !this.state.sisHidden
+        });
     }
 
     grumpyNameChange = (name) => {
-        this.setState({ gname: name });
+        this.setState({ gname: name,
+                        gisHidden: !this.state.gisHidden
+        });
     }
 
     render() {
         return (
             <div>
-                <Curious hunger={this.state.cfood} name={this.state.cname} nameChange={this.curiousNameChange.bind(this)} />
-                <Small hunger={this.state.sfood} name={this.state.sname} nameChange={this.smallNameChange.bind(this)} />
-                <Grumpy hunger={this.state.gfood} name={this.state.gname} nameChange={this.grumpyNameChange.bind(this)} />
+                <Curious isHidden={this.state.cisHidden} hunger={this.state.cfood} name={this.state.cname} nameChange={this.curiousNameChange.bind(this)} />
+                <Small isHidden={this.state.sisHidden} hunger={this.state.sfood} name={this.state.sname} nameChange={this.smallNameChange.bind(this)} />
+                <Grumpy isHidden={this.state.gisHidden} hunger={this.state.gfood} name={this.state.gname} nameChange={this.grumpyNameChange.bind(this)} />
             </div>
         );
     }

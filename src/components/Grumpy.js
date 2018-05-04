@@ -4,12 +4,18 @@ import KittyForm from './KittyForm';
 
 class Grumpy extends React.Component {
     render() {
+        let hungrypercent = ''
+        if(this.props.name) {
+            hungrypercent = `Your kitty is ${this.props.hunger}% hungry`;
+        }
         return (
             <div className='grumpy-image'>
                 <h1>{this.props.name}</h1>
-                 <h3>Your kitty is {this.props.hunger}% hungry</h3>
+                 <h3>{hungrypercent}</h3>
                 <img src={grumpy} />
-                <KittyForm nameChange={this.props.nameChange.bind(this)} />
+                <div>
+                    {!this.props.isHidden && <KittyForm isHidden={this.props.isHidden} nameChange={this.props.nameChange.bind(this)} />}
+                </div>
             </div>
         )
     }

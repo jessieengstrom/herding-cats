@@ -14,8 +14,8 @@ class KittyForm extends React.Component {
         return (
             <div>
                 <form className='kitty-form' onSubmit={this.handleSubmit.bind(this)}>
-                    <input type='text' ref='kname' placeholder='kitty name' />
-                    <input type='submit' value='name kitty' />
+                    <input type='text' ref='kname' placeholder='Kitty Name' />
+                    <input type='submit' value='Adopt Kitty' />
                 </form>
             </div>
         )
