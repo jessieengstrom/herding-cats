@@ -11,6 +11,9 @@ class App extends Component {
             cname: '',
             gname: '',
             sname: '',
+            cfood: 0,
+            gfood: 0,
+            sfood: 0
         }
     }
     
@@ -29,9 +32,9 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Curious name={this.state.cname} nameChange={this.curiousNameChange.bind(this)} />
-                <Small name={this.state.sname} nameChange={this.smallNameChange.bind(this)} />
-                <Grumpy name={this.state.gname} nameChange={this.grumpyNameChange.bind(this)} />
+                <Curious hunger={this.state.cfood} name={this.state.cname} nameChange={this.curiousNameChange.bind(this)} />
+                <Small hunger={this.state.sfood} name={this.state.sname} nameChange={this.smallNameChange.bind(this)} />
+                <Grumpy hunger={this.state.gfood} name={this.state.gname} nameChange={this.grumpyNameChange.bind(this)} />
             </div>
         );
     }

@@ -7,6 +7,7 @@ class Small extends React.Component {
         return (
             <div className='small-image'>
                 <h1>{this.props.name}</h1>
+                 <h3>Your kitty is {this.props.hunger}% hungry</h3>
                 <img src={small} />
                 <KittyForm nameChange={this.props.nameChange.bind(this)} />
             </div>
